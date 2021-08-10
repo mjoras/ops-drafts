@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-08-08T01:06:21.018626+00:00",
+  "timestamp": "2021-08-10T01:07:48.895385+00:00",
   "repo": "quicwg/ops-drafts",
   "labels": [
     {
@@ -28798,13 +28798,13 @@
       "labels": [],
       "body": "as discussed on-list",
       "createdAt": "2021-07-19T05:03:37Z",
-      "updatedAt": "2021-08-07T02:04:33Z",
+      "updatedAt": "2021-08-09T02:15:28Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "fcd55f5bfd2e8c1b0a9dfdf0f80101520c9a8866",
       "headRepository": "mnot/ops-drafts",
       "headRefName": "mnot-src-ports",
-      "headRefOid": "95e5f065f254f1414c299ae077f2ee2ea665e4c4",
+      "headRefOid": "b7b0cadc63a902dad02d0b2b6545033003fb5d02",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -28933,6 +28933,98 @@
               "updatedAt": "2021-08-07T02:04:33Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTQ4MjMx",
+          "commit": {
+            "abbreviatedOid": "95e5f06"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-08T23:42:07Z",
+          "updatedAt": "2021-08-08T23:42:08Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "I think that it is just \"binding\" rather than \"rebinding\".  I read \"rebinding\" as what happens when flow state is lost and a new port binding is assigned to that flow.  But this is just \"binding\", which is any time a port is bound to a flow.",
+              "createdAt": "2021-08-08T23:42:08Z",
+              "updatedAt": "2021-08-08T23:42:08Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTY3MjE0",
+          "commit": {
+            "abbreviatedOid": "95e5f06"
+          },
+          "author": "ianswett",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "Looks sensible, some suggestions.",
+          "createdAt": "2021-08-09T01:54:58Z",
+          "updatedAt": "2021-08-09T02:02:40Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "```suggestion\r\nreflection attacks, often due to server misconfiguration:\r\n```",
+              "createdAt": "2021-08-09T01:54:58Z",
+              "updatedAt": "2021-08-09T02:02:40Z"
+            },
+            {
+              "originalPosition": 47,
+              "body": "```suggestion\r\nServices might block source ports known to be vulnerable to reflection\r\nattacks to avoid the overhead of processing large numbers of packets.\r\nHowever, this practice has negative effects on\r\n```",
+              "createdAt": "2021-08-09T01:57:04Z",
+              "updatedAt": "2021-08-09T02:02:40Z"
+            },
+            {
+              "originalPosition": 54,
+              "body": "```suggestion\r\nthat the list above is not exhaustive; other source ports might be considered\r\n```",
+              "createdAt": "2021-08-09T02:00:19Z",
+              "updatedAt": "2021-08-09T02:02:40Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTcxMDE3",
+          "commit": {
+            "abbreviatedOid": "d3dfb71"
+          },
+          "author": "mnot",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-09T02:14:58Z",
+          "updatedAt": "2021-08-09T02:14:59Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "A quick look around shows a lot more consistent use of 'rebinding' for this case; e.g., [here](https://tools.ietf.org/id/draft-duke-quic-natsupp-00.html)",
+              "createdAt": "2021-08-09T02:14:59Z",
+              "updatedAt": "2021-08-09T02:14:59Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTcxMDk2",
+          "commit": {
+            "abbreviatedOid": "d3dfb71"
+          },
+          "author": "mnot",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-09T02:15:28Z",
+          "updatedAt": "2021-08-09T02:15:28Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "I don't think it's the port that's vulnerable to attacks; it's the underlying protocol.",
+              "createdAt": "2021-08-09T02:15:28Z",
+              "updatedAt": "2021-08-09T02:15:28Z"
+            }
+          ]
         }
       ]
     },
@@ -28948,7 +29040,7 @@
       "labels": [],
       "body": "This would be my proposal of a few small additions based on the discussion on list and at the last meeting (IETF-112) about privacy implications after migration regarding exposure of linkable user IP addresses to the server. The text doesn't give any recommendations but at least mentions it in the relevant sections.",
       "createdAt": "2021-08-06T14:48:12Z",
-      "updatedAt": "2021-08-06T14:48:12Z",
+      "updatedAt": "2021-08-09T02:12:21Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "fcd55f5bfd2e8c1b0a9dfdf0f80101520c9a8866",
@@ -28960,7 +29052,101 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTY4ODY0",
+          "commit": {
+            "abbreviatedOid": "2df0933"
+          },
+          "author": "ianswett",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-09T02:04:06Z",
+          "updatedAt": "2021-08-09T02:04:07Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\nis intentionally migrated to new path, a new connection ID is used to minimize\r\n```",
+              "createdAt": "2021-08-09T02:04:06Z",
+              "updatedAt": "2021-08-09T02:04:07Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTY5MjA2",
+          "commit": {
+            "abbreviatedOid": "2df0933"
+          },
+          "author": "ianswett",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-09T02:05:58Z",
+          "updatedAt": "2021-08-09T02:05:59Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\r\nlinkability by network observers. The other QUIC endpoint uses the\r\nconnection ID to link different addresses to the same connection\r\nand entity if a non-zero-length connection ID is provided.\r\n```",
+              "createdAt": "2021-08-09T02:05:58Z",
+              "updatedAt": "2021-08-09T02:05:59Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTY5OTI4",
+          "commit": {
+            "abbreviatedOid": "2df0933"
+          },
+          "author": "ianswett",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-09T02:09:38Z",
+          "updatedAt": "2021-08-09T02:09:39Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\r\nThe server uses the connection ID to associate packets to a QUIC\r\nconnection and as such can also link different IP addresses to the same\r\nuser. Further, analysis of\r\n```",
+              "createdAt": "2021-08-09T02:09:38Z",
+              "updatedAt": "2021-08-09T02:09:39Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTcwMzcz",
+          "commit": {
+            "abbreviatedOid": "2df0933"
+          },
+          "author": "ianswett",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-09T02:11:46Z",
+          "updatedAt": "2021-08-09T02:11:46Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "It may also be to the path, so I'd drop 'to the server'.\r\n\r\n```suggestion\r\na linkage between client addresses which should also be\r\n```",
+              "createdAt": "2021-08-09T02:11:46Z",
+              "updatedAt": "2021-08-09T02:11:46Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI0OTcwNDg4",
+          "commit": {
+            "abbreviatedOid": "2df0933"
+          },
+          "author": "ianswett",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "I left a few suggestions, but this is heading in a good direction.",
+          "createdAt": "2021-08-09T02:12:21Z",
+          "updatedAt": "2021-08-09T02:12:21Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
