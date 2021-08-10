@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 7 February 2022                                          Google
-                                                           6 August 2021
+Expires: 11 February 2022                                         Google
+                                                          10 August 2021
 
 
               Applicability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 February 2022.
+   This Internet-Draft will expire on 11 February 2022.
 
 Copyright Notice
 
@@ -683,10 +683,10 @@ Table of Contents
    recommended if any clients are behind a NAT or could be.  A non-zero-
    length connection ID is also strongly recommended when active
    migration is supported.  If a connection is intentionally migrated to
-   new path, an new connection ID is used to minimize linkability by
-   network observers; of the other QUIC endpoint, however, is of course
-   able to link different addresses to the same connection and entity if
-   a non-zero-length connection ID is provided.
+   new path, a new connection ID is used to minimize linkability by
+   network observers.  The other QUIC endpoint uses the connection ID to
+   link different addresses to the same connection and entity if a non-
+   zero-length connection ID is provided.
 
    The base specification of QUIC version 1 only supports the use of a
    single network path at a time, which enables failover use cases.
@@ -802,12 +802,11 @@ Table of Contents
 
    While sufficiently robust connection ID generation schemes will
    mitigate linkability for on-path observers, they do not provide full
-   protection.  Of course, the server uses the connection ID to
-   associate packets to the same QUIC connection and as such can also
-   link differeet IP addresses to the same user.  Further, analysis of
-   the lifetimes of six-tuples (source and destination addresses as well
-   as the migrated CID) may expose these links as well to on-path
-   observers.
+   protection.  The server uses the connection ID to associate packets
+   to a QUIC connection and as such can also link different IP addresses
+   to the same user.  Further, analysis of the lifetimes of six-tuples
+   (source and destination addresses as well as the migrated CID) may
+   expose these links as well to on-path observers.
 
    In the limit where connection migration in a server pool is rare, it
    is trivial for an observer to associate two connection IDs.
