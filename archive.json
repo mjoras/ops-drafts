@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-08-10T01:07:48.895385+00:00",
+  "timestamp": "2021-08-12T01:04:37.377287+00:00",
   "repo": "quicwg/ops-drafts",
   "labels": [
     {
@@ -28704,10 +28704,12 @@
       "author": "ianswett",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "ready-to-merge"
+      ],
       "body": "Follow-on to #388",
       "createdAt": "2021-06-30T17:08:07Z",
-      "updatedAt": "2021-06-30T17:27:08Z",
+      "updatedAt": "2021-08-10T11:25:19Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "1d59c1407442d5dc3c7472ca19a81139cdb0e1b8",
@@ -29040,13 +29042,13 @@
       "labels": [],
       "body": "This would be my proposal of a few small additions based on the discussion on list and at the last meeting (IETF-112) about privacy implications after migration regarding exposure of linkable user IP addresses to the server. The text doesn't give any recommendations but at least mentions it in the relevant sections.",
       "createdAt": "2021-08-06T14:48:12Z",
-      "updatedAt": "2021-08-09T02:12:21Z",
+      "updatedAt": "2021-08-11T11:42:04Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "fcd55f5bfd2e8c1b0a9dfdf0f80101520c9a8866",
       "headRepository": "quicwg/ops-drafts",
       "headRefName": "mirjak-patch-4",
-      "headRefOid": "2df0933812c44da2641d2045ecb26e25566a6d40",
+      "headRefOid": "1266cd4c3a6d04c4a822a91373213b52a0b90045",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -29145,6 +29147,144 @@
           "createdAt": "2021-08-09T02:12:21Z",
           "updatedAt": "2021-08-09T02:12:21Z",
           "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI2MzE5MDY0",
+          "commit": {
+            "abbreviatedOid": "2df0933"
+          },
+          "author": "mirjak",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-10T11:30:39Z",
+          "updatedAt": "2021-08-10T11:30:39Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "I think I would rather prefer to be explicit about both cases here. \r\n\r\n```suggestion\r\na linkage between client addresses to the server and may expose this linkage\r\nalso to the path if the connection ID cannot be changed or flows can\r\notherwise be correlated. When migration is supported, this needs to be\r\n```",
+              "createdAt": "2021-08-10T11:30:39Z",
+              "updatedAt": "2021-08-10T11:30:39Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI2OTA5Mjc4",
+          "commit": {
+            "abbreviatedOid": "1266cd4"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "I'm somewhat negative on some of the earlier changes.  There are valid points here, but they could be made more clearly.",
+          "createdAt": "2021-08-10T22:55:27Z",
+          "updatedAt": "2021-08-10T23:01:28Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Is this about minimizing linkability or making packets usable by receivers?  Because zero-length connection IDs are as good (or better) when it comes to minimizing linkability.",
+              "createdAt": "2021-08-10T22:55:27Z",
+              "updatedAt": "2021-08-10T23:01:28Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "Migration of what?\r\n\r\nI think that the key message here is that using a connection ID makes it easier to match packets to connection state if your peer address might change.  This happens if the other side might be behind a NAT (as is common for clients).  It also happens if they migrate (which only clients are permitted to do).\r\n\r\nBringing in a discussion on linkability is a non-sequitur here.",
+              "createdAt": "2021-08-10T22:56:47Z",
+              "updatedAt": "2021-08-10T23:01:28Z"
+            },
+            {
+              "originalPosition": 21,
+              "body": "I don't think that this addition is helpful.  The key point the paragraph previously made was that traffic analysis might reveal links to observers.  Now you are talking about endpoints being able to link.  That's not necessary and distracts (detracts also) from the point that was being made.",
+              "createdAt": "2021-08-10T22:58:31Z",
+              "updatedAt": "2021-08-10T23:01:28Z"
+            },
+            {
+              "originalPosition": 33,
+              "body": "This new point is worth a new paragraph.\r\n\r\n> Using migration reveals to the server that the same client controls multiple addresses.",
+              "createdAt": "2021-08-10T23:00:36Z",
+              "updatedAt": "2021-08-10T23:01:28Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI3MTQ1ODMw",
+          "commit": {
+            "abbreviatedOid": "1266cd4"
+          },
+          "author": "mirjak",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-11T07:32:37Z",
+          "updatedAt": "2021-08-11T07:32:37Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "The CID is used to match connection at the receiver. A _new_ CID is used to avoid linkability on path.",
+              "createdAt": "2021-08-11T07:32:37Z",
+              "updatedAt": "2021-08-11T07:32:37Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI3MTQ4NzYx",
+          "commit": {
+            "abbreviatedOid": "1266cd4"
+          },
+          "author": "mirjak",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-11T07:35:59Z",
+          "updatedAt": "2021-08-11T07:35:59Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "This section is introducing the CID and the fact that the CID changes on intended/active migration to a new path (e.g. in a handover for mobility) should be mentioned here as well from my point of view. ",
+              "createdAt": "2021-08-11T07:35:59Z",
+              "updatedAt": "2021-08-11T07:36:00Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI3MTQ5MjE3",
+          "commit": {
+            "abbreviatedOid": "1266cd4"
+          },
+          "author": "mirjak",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-11T07:36:29Z",
+          "updatedAt": "2021-08-11T07:36:29Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "Yes, we might not need this addition here and I can remove it again.",
+              "createdAt": "2021-08-11T07:36:29Z",
+              "updatedAt": "2021-08-11T07:36:29Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzI3Mzc2OTQ4",
+          "commit": {
+            "abbreviatedOid": "1266cd4"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-11T11:42:04Z",
+          "updatedAt": "2021-08-11T11:42:04Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Right. Two concepts that this mixes together.",
+              "createdAt": "2021-08-11T11:42:04Z",
+              "updatedAt": "2021-08-11T11:42:04Z"
+            }
+          ]
         }
       ]
     }
