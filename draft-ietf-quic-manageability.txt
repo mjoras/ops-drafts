@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 3 January 2022                          Google Switzerland GmbH
-                                                             2 July 2021
+Expires: 19 February 2022                        Google Switzerland GmbH
+                                                          18 August 2021
 
 
               Manageability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2022.
+   This Internet-Draft will expire on 19 February 2022.
 
 Copyright Notice
 
@@ -1321,14 +1321,14 @@ Table of Contents
    [QUIC-TLS] Thomson, M. and S. Turner, "Using TLS to Secure QUIC",
               Work in Progress, Internet-Draft, draft-ietf-quic-tls-34,
               14 January 2021, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-quic-tls-34.txt>.
+              draft-ietf-quic-tls-34>.
 
    [QUIC-TRANSPORT]
               Iyengar, J. and M. Thomson, "QUIC: A UDP-Based Multiplexed
               and Secure Transport", Work in Progress, Internet-Draft,
               draft-ietf-quic-transport-34, 14 January 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              transport-34.txt>.
+              transport-34>.
 
 9.2.  Informative References
 
@@ -1350,7 +1350,7 @@ Table of Contents
               Transport Protocol", Work in Progress, Internet-Draft,
               draft-ietf-quic-applicability-12, 30 June 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              applicability-12.txt>.
+              applicability-12>.
 
    [I-D.ietf-tsvwg-transport-encrypt]
               Fairhurst, G. and C. Perkins, "Considerations around
@@ -1359,7 +1359,7 @@ Table of Contents
               Progress, Internet-Draft, draft-ietf-tsvwg-transport-
               encrypt-21, 20 April 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-tsvwg-
-              transport-encrypt-21.txt>.
+              transport-encrypt-21>.
 
    [IPIM]     Allman, M., Beverly, R., and B. Trammell, "In-Protocol
               Internet Measurement (arXiv preprint 1612.02902)", 9
@@ -1370,34 +1370,34 @@ Table of Contents
               Transport Protocol", Work in Progress, Internet-Draft,
               draft-ietf-quic-applicability-12, 30 June 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              applicability-12.txt>.
+              applicability-12>.
 
    [QUIC-HTTP]
               Bishop, M., "Hypertext Transfer Protocol Version 3
               (HTTP/3)", Work in Progress, Internet-Draft, draft-ietf-
               quic-http-34, 2 February 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              http-34.txt>.
+              http-34>.
 
    [QUIC-INVARIANTS]
               Thomson, M., "Version-Independent Properties of QUIC",
               Work in Progress, Internet-Draft, draft-ietf-quic-
               invariants-13, 14 January 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              invariants-13.txt>.
+              invariants-13>.
 
    [QUIC-RECOVERY]
               Iyengar, J. and I. Swett, "QUIC Loss Detection and
               Congestion Control", Work in Progress, Internet-Draft,
               draft-ietf-quic-recovery-34, 14 January 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              recovery-34.txt>.
+              recovery-34>.
 
    [QUIC_LB]  Duke, M. and N. Banks, "QUIC-LB: Generating Routable QUIC
               Connection IDs", Work in Progress, Internet-Draft, draft-
-              ietf-quic-load-balancers-06, 4 February 2021,
+              ietf-quic-load-balancers-07, 9 July 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              load-balancers-06.txt>.
+              load-balancers-07>.
 
    [RFC1191]  Mogul, J. and S. Deering, "Path MTU discovery", RFC 1191,
               DOI 10.17487/RFC1191, November 1990,
@@ -1487,9 +1487,9 @@ Table of Contents
 
    [TLS-ECH]  Rescorla, E., Oku, K., Sullivan, N., and C. A. Wood, "TLS
               Encrypted Client Hello", Work in Progress, Internet-Draft,
-              draft-ietf-tls-esni-11, 14 June 2021,
+              draft-ietf-tls-esni-13, 12 August 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-tls-
-              esni-11.txt>.
+              esni-13>.
 
    [TMA-QOF]  Trammell, B., Gugelmann, D., and N. Brownlee, "Inline Data
               Integrity Signals for Passive Measurement (in Proc. TMA

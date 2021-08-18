@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 3 January 2022                                           Google
-                                                             2 July 2021
+Expires: 19 February 2022                                         Google
+                                                          18 August 2021
 
 
               Applicability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 January 2022.
+   This Internet-Draft will expire on 19 February 2022.
 
 Copyright Notice
 
@@ -843,8 +843,8 @@ Table of Contents
    QUIC, as defined in [RFC9000], has a single congestion controller and
    recovery handler.  This design assumes that all packets of a QUIC
    connection, or at least with the same 5-tuple {dest addr, source
-   addr, protocol, dest port, source port} that same the same DiffServ
-   Code Point (DSCP) [RFC2475], will receive similar network treatment
+   addr, protocol, dest port, source port}, that have the same DiffServ
+   Code Point (DSCP) [RFC2475] will receive similar network treatment
    since feedback about loss or delay of each packet is used as input to
    the congestion controller.  Therefore, packets belonging to the same
    connection should use a single DSCP.  Section 5.1 of [RFC7657]
@@ -1013,19 +1013,19 @@ Table of Contents
               and Secure Transport", Work in Progress, Internet-Draft,
               draft-ietf-quic-transport-34, 14 January 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              transport-34.txt>.
+              transport-34>.
 
    [QUIC-INVARIANTS]
               Thomson, M., "Version-Independent Properties of QUIC",
               Work in Progress, Internet-Draft, draft-ietf-quic-
               invariants-13, 14 January 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              invariants-13.txt>.
+              invariants-13>.
 
    [QUIC-TLS] Thomson, M. and S. Turner, "Using TLS to Secure QUIC",
               Work in Progress, Internet-Draft, draft-ietf-quic-tls-34,
               14 January 2021, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-quic-tls-34.txt>.
+              draft-ietf-quic-tls-34>.
 
    [RFC6335]  Cotton, M., Eggert, L., Touch, J., Westerlund, M., and S.
               Cheshire, "Internet Assigned Numbers Authority (IANA)
@@ -1065,38 +1065,38 @@ Table of Contents
    [I-D.draft-ietf-httpbis-priority]
               Oku, K. and L. Pardue, "Extensible Prioritization Scheme
               for HTTP", Work in Progress, Internet-Draft, draft-ietf-
-              httpbis-priority-03, 11 January 2021,
+              httpbis-priority-04, 11 July 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-              priority-03.txt>.
+              priority-04>.
 
    [I-D.draft-ietf-quic-version-negotiation]
               Schinazi, D. and E. Rescorla, "Compatible Version
               Negotiation for QUIC", Work in Progress, Internet-Draft,
               draft-ietf-quic-version-negotiation-04, 26 May 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              version-negotiation-04.txt>.
+              version-negotiation-04>.
 
    [I-D.ietf-quic-datagram]
               Pauly, T., Kinnear, E., and D. Schinazi, "An Unreliable
               Datagram Extension to QUIC", Work in Progress, Internet-
-              Draft, draft-ietf-quic-datagram-02, 16 February 2021,
+              Draft, draft-ietf-quic-datagram-03, 12 July 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              datagram-02.txt>.
+              datagram-03>.
 
    [I-D.ietf-quic-manageability]
               Kuehlewind, M. and B. Trammell, "Manageability of the QUIC
               Transport Protocol", Work in Progress, Internet-Draft,
               draft-ietf-quic-manageability-12, 30 June 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              manageability-12.txt>.
+              manageability-12>.
 
    [I-D.ietf-taps-arch]
               Pauly, T., Trammell, B., Brunstrom, A., Fairhurst, G.,
               Perkins, C., Tiesel, P. S., and C. A. Wood, "An
               Architecture for Transport Services", Work in Progress,
-              Internet-Draft, draft-ietf-taps-arch-10, 30 April 2021,
+              Internet-Draft, draft-ietf-taps-arch-11, 12 July 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-taps-
-              arch-10.txt>.
+              arch-11>.
 
    [PaaschNanog]
               Paasch, C., "Network Support for TCP Fast Open (NANOG 67
@@ -1109,13 +1109,13 @@ Table of Contents
               (HTTP/3)", Work in Progress, Internet-Draft, draft-ietf-
               quic-http-34, 2 February 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              http-34.txt>.
+              http-34>.
 
    [QUIC-LB]  Duke, M. and N. Banks, "QUIC-LB: Generating Routable QUIC
               Connection IDs", Work in Progress, Internet-Draft, draft-
-              ietf-quic-load-balancers-06, 4 February 2021,
+              ietf-quic-load-balancers-07, 9 July 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              load-balancers-06.txt>.
+              load-balancers-07>.
 
    [RFC2475]  Blake, S., Black, D., Carlson, M., Davies, E., Wang, Z.,
               and W. Weiss, "An Architecture for Differentiated
