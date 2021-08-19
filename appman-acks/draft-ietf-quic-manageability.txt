@@ -1291,8 +1291,6 @@ Table of Contents
 
    *  David Schinazi
 
-   *  Eric Rescorla
-
    *  Gorry Fairhurst
 
    *  Ian Swett
