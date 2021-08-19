@@ -83,7 +83,7 @@ Table of Contents
      4.3.  Address Rewriting to Ensure Routing Stability
      4.4.  Server Cooperation with Load Balancers
      4.5.  Filtering Behavior
-     4.6.  UDP Blocking or Throttling
+     4.6.  UDP Blocking, Throttling, and NAT Binding
      4.7.  DDoS Detection and Mitigation
      4.8.  Quality of Service Handling and ECMP Routing
      4.9.  Handling ICMP Messages
@@ -1044,7 +1044,7 @@ Table of Contents
    QUIC.  Sudden drops afterwards will result in slow and costly
    timeouts before abandoning the connection.
 
-4.6.  UDP Blocking or Throttling
+4.6.  UDP Blocking, Throttling, and NAT Binding
 
    Today, UDP is the most prevalent DDoS vector, since it is easy for
    compromised non-admin applications to send a flood of large UDP
@@ -1076,6 +1076,11 @@ Table of Contents
    to survive address changes, e.g. by NAT rebindings, blocking a
    portion of the traffic based on 5-tuple hashing increases the risk of
    black-holing an active connection when the address changes.
+
+   Note that some source ports are assumed to be reflection attack
+   vectors by some servers; see Section 8.1 of
+   [I-D.ietf-quic-applicability].  As a result, NAT binding to these
+   source ports can result in that traffic being blocked.
 
 4.7.  DDoS Detection and Mitigation
 

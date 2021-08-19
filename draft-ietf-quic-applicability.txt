@@ -68,6 +68,7 @@ Table of Contents
    6.  Error Handling
    7.  Acknowledgment Efficiency
    8.  Port Selection and Application Endpoint Discovery
+     8.1.  Source Port Selection
    9.  Connection Migration
    10. Connection Termination
    11. Information Exposure and the Connection ID
@@ -669,6 +670,37 @@ Table of Contents
    versions.  Decisions for those protocols might be informed by choices
    made by other protocols, like HTTP/3.
 
+8.1.  Source Port Selection
+
+   Some UDP protocols are vulnerable to reflection attacks, where an
+   attacker is able to direct traffic to a third party as a denial of
+   service.  For example, these source ports are associated with
+   applications known to be vulnerable to reflection attacks, often due
+   to server misconfiguration:
+
+   *  port 53 - DNS [RFC1034]
+
+   *  port 123 - NTP [RFC5905]
+
+   *  port 1900 - SSDP [SSDP]
+
+   *  port 5353 - mDNS [RFC6762]
+
+   *  port 11211 - memcached
+
+   Services might block source ports associated with protocols known to
+   be vulnerable to reflection attacks, to avoid the overhead of
+   processing large numbers of packets.  However, this practice has
+   negative effects on clients: not only does it require establishment
+   of a new connection, but in some instances, might cause the client to
+   avoid using QUIC for that service for a period of time, downgrading
+   to a non-UDP protocol (see Section 2).
+
+   As a result, client implementations are encouraged to avoid using
+   source ports associated with protocols known to be vulnerable to
+   reflection attacks.  Note that the list above is not exhaustive;
+   other source ports might be considered reflection vectors as well.
+
 9.  Connection Migration
 
    QUIC supports connection migration by the client.  If an IP address
@@ -1117,6 +1149,10 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
               load-balancers-07>.
 
+   [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
+              STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
+              <https://datatracker.ietf.org/doc/html/rfc1034>.
+
    [RFC2475]  Blake, S., Black, D., Carlson, M., Davies, E., Wang, Z.,
               and W. Weiss, "An Architecture for Differentiated
               Services", RFC 2475, DOI 10.17487/RFC2475, December 1998,
@@ -1132,6 +1168,15 @@ Table of Contents
               Srisuresh, "NAT Behavioral Requirements for TCP", BCP 142,
               RFC 5382, DOI 10.17487/RFC5382, October 2008,
               <https://datatracker.ietf.org/doc/html/rfc5382>.
+
+   [RFC5905]  Mills, D., Martin, J., Ed., Burbank, J., and W. Kasch,
+              "Network Time Protocol Version 4: Protocol and Algorithms
+              Specification", RFC 5905, DOI 10.17487/RFC5905, June 2010,
+              <https://datatracker.ietf.org/doc/html/rfc5905>.
+
+   [RFC6762]  Cheshire, S. and M. Krochmal, "Multicast DNS", RFC 6762,
+              DOI 10.17487/RFC6762, February 2013,
+              <https://datatracker.ietf.org/doc/html/rfc6762>.
 
    [RFC7301]  Friedl, S., Popov, A., Langley, A., and E. Stephan,
               "Transport Layer Security (TLS) Application-Layer Protocol
@@ -1157,6 +1202,12 @@ Table of Contents
               Guidelines", BCP 145, RFC 8085, DOI 10.17487/RFC8085,
               March 2017,
               <https://datatracker.ietf.org/doc/html/rfc8085>.
+
+   [SSDP]     Donoho, A., Roe, B., Bodlaender, M., Gildred, J., Messer,
+              A., Kim, Y., Fairman, B., and J. Tourzan, "UPnP Device
+              Architecture 2.0", 17 April 2020,
+              <https://openconnectivity.org/upnp-specs/UPnP-arch-
+              DeviceArchitecture-v2.0-20200417.pdf>.
 
    [Swett16]  Swett, I., "QUIC Deployment Experience at Google (IETF96
               QUIC BoF presentation)", 20 July 2016,
