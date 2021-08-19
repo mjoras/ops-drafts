@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 11 February 2022                        Google Switzerland GmbH
-                                                          10 August 2021
+Expires: 20 February 2022                        Google Switzerland GmbH
+                                                          19 August 2021
 
 
               Manageability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 February 2022.
+   This Internet-Draft will expire on 20 February 2022.
 
 Copyright Notice
 
@@ -1487,9 +1487,9 @@ Table of Contents
 
    [TLS-ECH]  Rescorla, E., Oku, K., Sullivan, N., and C. A. Wood, "TLS
               Encrypted Client Hello", Work in Progress, Internet-Draft,
-              draft-ietf-tls-esni-12, 7 July 2021,
+              draft-ietf-tls-esni-13, 12 August 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-tls-
-              esni-12>.
+              esni-13>.
 
    [TMA-QOF]  Trammell, B., Gugelmann, D., and N. Brownlee, "Inline Data
               Integrity Signals for Passive Measurement (in Proc. TMA

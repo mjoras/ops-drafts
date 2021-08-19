@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 11 February 2022                                         Google
-                                                          10 August 2021
+Expires: 20 February 2022                                         Google
+                                                          19 August 2021
 
 
               Applicability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 February 2022.
+   This Internet-Draft will expire on 20 February 2022.
 
 Copyright Notice
 
@@ -976,8 +976,10 @@ Table of Contents
    linkability, replay attacks, and randomness discussed in [QUIC-TLS]
    should be taken into account when deploying and using QUIC.  Further,
    migration to an new address exposes a linkage between client
-   addresses to the server which should also be considered with
-   respective to user privacy.
+   addresses to the server and may expose this linkage also to the path
+   if the connection ID cannot be changed or flows can otherwise be
+   correlated.  When migration is supported, this needs to be considered
+   with respective to user privacy.
 
    Application developers should note that any fallback they use when
    QUIC cannot be used due to network blocking of UDP should guarantee
