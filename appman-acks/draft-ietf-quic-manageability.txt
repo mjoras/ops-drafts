@@ -1285,8 +1285,6 @@ Table of Contents
 
    *  Chris Box
 
-   *  Christian Huitema
-
    *  Dan Druta
 
    *  David Schinazi
