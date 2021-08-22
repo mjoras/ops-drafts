@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2021-08-12T01:04:37.377287+00:00",
+  "timestamp": "2021-08-22T01:03:19.953736+00:00",
   "repo": "quicwg/ops-drafts",
   "labels": [
     {
@@ -7108,15 +7108,15 @@
       "id": "MDU6SXNzdWU5NDAxNjAyNzA=",
       "title": "Double-check contributors",
       "url": "https://github.com/quicwg/ops-drafts/issues/391",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mirjak",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The merge of PR #390 was probably not fully correct but we need to check that these lists and the acks are correct for both drafts!",
       "createdAt": "2021-07-08T19:34:28Z",
-      "updatedAt": "2021-07-08T19:34:28Z",
-      "closedAt": null,
+      "updatedAt": "2021-08-19T08:54:20Z",
+      "closedAt": "2021-08-19T08:54:20Z",
       "comments": []
     },
     {
@@ -28700,7 +28700,7 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NjgxMDUzNjQz",
       "title": "Tweaks to the Extracting SNI section",
       "url": "https://github.com/quicwg/ops-drafts/pull/389",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ianswett",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -28709,17 +28709,19 @@
       ],
       "body": "Follow-on to #388",
       "createdAt": "2021-06-30T17:08:07Z",
-      "updatedAt": "2021-08-10T11:25:19Z",
+      "updatedAt": "2021-08-19T08:16:25Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "1d59c1407442d5dc3c7472ca19a81139cdb0e1b8",
       "headRepository": "ianswett/ops-drafts",
       "headRefName": "patch-5",
       "headRefOid": "7a44f7672485bfcd01f8b0a63e40e243c9785f9a",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2021-08-19T08:16:25Z",
+      "mergedAt": "2021-08-19T08:16:25Z",
+      "mergedBy": "britram",
+      "mergeCommit": {
+        "oid": "acd8181475dc19890819b85ce9f9645e4dec997b"
+      },
       "comments": [
         {
           "author": "mirjak",
@@ -28793,24 +28795,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NjkyMjcyODgw",
       "title": "Talk about source ports",
       "url": "https://github.com/quicwg/ops-drafts/pull/392",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "as discussed on-list",
       "createdAt": "2021-07-19T05:03:37Z",
-      "updatedAt": "2021-08-09T02:15:28Z",
+      "updatedAt": "2021-08-19T08:23:54Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "fcd55f5bfd2e8c1b0a9dfdf0f80101520c9a8866",
       "headRepository": "mnot/ops-drafts",
       "headRefName": "mnot-src-ports",
-      "headRefOid": "b7b0cadc63a902dad02d0b2b6545033003fb5d02",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "53f0f11fb74d6cbb84e4ef6472b43296c14c311b",
+      "closedAt": "2021-08-19T08:23:53Z",
+      "mergedAt": "2021-08-19T08:23:53Z",
+      "mergedBy": "britram",
+      "mergeCommit": {
+        "oid": "121cc38094bb63592a64aa3cdf5059999d819a90"
+      },
       "comments": [
         {
           "author": "mnot",
@@ -29027,6 +29031,99 @@
               "updatedAt": "2021-08-09T02:15:28Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNjczMzY5",
+          "commit": {
+            "abbreviatedOid": "b7b0cad"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T07:52:48Z",
+          "updatedAt": "2021-08-19T07:52:49Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "```suggestion\r\nServices might block source ports associated with protocols known to be\r\nvulnerable to reflection attacks, to avoid the overhead of processing large\r\nnumbers of packets. However, this practice has negative effects on\r\n```",
+              "createdAt": "2021-08-19T07:52:48Z",
+              "updatedAt": "2021-08-19T07:52:49Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNjczNzk4",
+          "commit": {
+            "abbreviatedOid": "b7b0cad"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T07:53:15Z",
+          "updatedAt": "2021-08-19T07:53:15Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "split the difference between Ian's and Mark's suggestions?",
+              "createdAt": "2021-08-19T07:53:15Z",
+              "updatedAt": "2021-08-19T07:53:15Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNjc0OTY1",
+          "commit": {
+            "abbreviatedOid": "b7b0cad"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-08-19T07:54:34Z",
+          "updatedAt": "2021-08-19T07:54:34Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzAxMjYz",
+          "commit": {
+            "abbreviatedOid": "2f86212"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:21:49Z",
+          "updatedAt": "2021-08-19T08:21:50Z",
+          "comments": [
+            {
+              "originalPosition": 15,
+              "body": "```suggestion\r\nbinding to these source ports can result in that traffic being blocked.\r\n```",
+              "createdAt": "2021-08-19T08:21:49Z",
+              "updatedAt": "2021-08-19T08:21:50Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzAxNzM5",
+          "commit": {
+            "abbreviatedOid": "2f86212"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:22:21Z",
+          "updatedAt": "2021-08-19T08:22:21Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n## UDP Blocking, Throttling, and NAT Binding {#sec-udp-1312}\r\n```",
+              "createdAt": "2021-08-19T08:22:21Z",
+              "updatedAt": "2021-08-19T08:22:21Z"
+            }
+          ]
         }
       ]
     },
@@ -29035,24 +29132,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NzA1NTQyNjg3",
       "title": "migration and address linkability at the server",
       "url": "https://github.com/quicwg/ops-drafts/pull/394",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mirjak",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This would be my proposal of a few small additions based on the discussion on list and at the last meeting (IETF-112) about privacy implications after migration regarding exposure of linkable user IP addresses to the server. The text doesn't give any recommendations but at least mentions it in the relevant sections.",
       "createdAt": "2021-08-06T14:48:12Z",
-      "updatedAt": "2021-08-11T11:42:04Z",
+      "updatedAt": "2021-08-19T08:31:51Z",
       "baseRepository": "quicwg/ops-drafts",
       "baseRefName": "master",
       "baseRefOid": "fcd55f5bfd2e8c1b0a9dfdf0f80101520c9a8866",
       "headRepository": "quicwg/ops-drafts",
       "headRefName": "mirjak-patch-4",
-      "headRefOid": "1266cd4c3a6d04c4a822a91373213b52a0b90045",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "eabc28c52426a4ca129098c43949ac9b1a2cbca3",
+      "closedAt": "2021-08-19T08:31:47Z",
+      "mergedAt": "2021-08-19T08:31:47Z",
+      "mergedBy": "britram",
+      "mergeCommit": {
+        "oid": "420c9251d05366a8015d960088ef828f43da1585"
+      },
       "comments": [],
       "reviews": [
         {
@@ -29283,6 +29382,201 @@
               "body": "Right. Two concepts that this mixes together.",
               "createdAt": "2021-08-11T11:42:04Z",
               "updatedAt": "2021-08-11T11:42:04Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzA1MDc5",
+          "commit": {
+            "abbreviatedOid": "b1951a9"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:25:43Z",
+          "updatedAt": "2021-08-19T08:25:44Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "```suggestion\r\ndeploying and using QUIC.\r\n\r\nFurther, migration to an new address exposes\r\n```",
+              "createdAt": "2021-08-19T08:25:43Z",
+              "updatedAt": "2021-08-19T08:25:44Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 395,
+      "id": "MDExOlB1bGxSZXF1ZXN0NzE1NzI2Nzg0",
+      "title": "Fix Contributors/Acknowledgments in line with RFC9000",
+      "url": "https://github.com/quicwg/ops-drafts/pull/395",
+      "state": "MERGED",
+      "author": "britram",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-08-19T08:40:10Z",
+      "updatedAt": "2021-08-19T08:53:44Z",
+      "baseRepository": "quicwg/ops-drafts",
+      "baseRefName": "master",
+      "baseRefOid": "420c9251d05366a8015d960088ef828f43da1585",
+      "headRepository": "quicwg/ops-drafts",
+      "headRefName": "appman-acks",
+      "headRefOid": "f1b2f916eb90eb15acbeb3f02d41f1fe96218655",
+      "closedAt": "2021-08-19T08:53:44Z",
+      "mergedAt": "2021-08-19T08:53:44Z",
+      "mergedBy": "britram",
+      "mergeCommit": {
+        "oid": "71c3bfdea7a17e7b2a967cd6506c1ca7b5cd2171"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzIzMTA2",
+          "commit": {
+            "abbreviatedOid": "a259d09"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:43:34Z",
+          "updatedAt": "2021-08-19T08:43:35Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n* Chris Box\r\n* Christian Huitema\r\n```",
+              "createdAt": "2021-08-19T08:43:34Z",
+              "updatedAt": "2021-08-19T08:43:35Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzIzMzI3",
+          "commit": {
+            "abbreviatedOid": "a259d09"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:43:47Z",
+          "updatedAt": "2021-08-19T08:43:48Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n* Christian Huitema\r\n* Gorry Fairhurst\r\n```",
+              "createdAt": "2021-08-19T08:43:47Z",
+              "updatedAt": "2021-08-19T08:43:48Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzI0Mjkw",
+          "commit": {
+            "abbreviatedOid": "74401d5"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:44:46Z",
+          "updatedAt": "2021-08-19T08:45:24Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "```suggestion\r\n* David Schinazi\r\n* Eric Rescorla\r\n```",
+              "createdAt": "2021-08-19T08:44:46Z",
+              "updatedAt": "2021-08-19T08:45:24Z"
+            },
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\n* Jana Iyengar\r\n* Jared Mauch\r\n```",
+              "createdAt": "2021-08-19T08:45:08Z",
+              "updatedAt": "2021-08-19T08:45:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzI2NDE5",
+          "commit": {
+            "abbreviatedOid": "da9de8d"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:46:52Z",
+          "updatedAt": "2021-08-19T08:46:52Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\nThe following people have contributed significant text to and/or\r\n```",
+              "createdAt": "2021-08-19T08:46:52Z",
+              "updatedAt": "2021-08-19T08:46:52Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzI5MjQx",
+          "commit": {
+            "abbreviatedOid": "a1cb145"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:49:46Z",
+          "updatedAt": "2021-08-19T08:49:46Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2021-08-19T08:49:46Z",
+              "updatedAt": "2021-08-19T08:49:47Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzMxODMy",
+          "commit": {
+            "abbreviatedOid": "16e600c"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:52:18Z",
+          "updatedAt": "2021-08-19T08:52:19Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2021-08-19T08:52:18Z",
+              "updatedAt": "2021-08-19T08:52:19Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NzMzNzMyMDEw",
+          "commit": {
+            "abbreviatedOid": "16e600c"
+          },
+          "author": "britram",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2021-08-19T08:52:29Z",
+          "updatedAt": "2021-08-19T08:52:30Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\r\n```",
+              "createdAt": "2021-08-19T08:52:29Z",
+              "updatedAt": "2021-08-19T08:52:30Z"
             }
           ]
         }
