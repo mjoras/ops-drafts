@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 20 February 2022                                         Google
-                                                          19 August 2021
+Expires: 11 March 2022                                            Google
+                                                        7 September 2021
 
 
               Applicability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 February 2022.
+   This Internet-Draft will expire on 11 March 2022.
 
 Copyright Notice
 
@@ -1136,9 +1136,9 @@ Table of Contents
    [I-D.ietf-quic-manageability]
               Kuehlewind, M. and B. Trammell, "Manageability of the QUIC
               Transport Protocol", Work in Progress, Internet-Draft,
-              draft-ietf-quic-manageability-12, 30 June 2021,
+              draft-ietf-quic-manageability-13, 2 September 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              manageability-12>.
+              manageability-13>.
 
    [I-D.ietf-taps-arch]
               Pauly, T., Trammell, B., Brunstrom, A., Fairhurst, G.,

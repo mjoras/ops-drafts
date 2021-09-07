@@ -5,8 +5,8 @@
 Network Working Group                                      M. Kuehlewind
 Internet-Draft                                                  Ericsson
 Intended status: Informational                               B. Trammell
-Expires: 20 February 2022                        Google Switzerland GmbH
-                                                          19 August 2021
+Expires: 11 March 2022                           Google Switzerland GmbH
+                                                        7 September 2021
 
 
               Manageability of the QUIC Transport Protocol
@@ -35,7 +35,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 February 2022.
+   This Internet-Draft will expire on 11 March 2022.
 
 Copyright Notice
 
@@ -1303,7 +1303,7 @@ Table of Contents
 
    *  Lucas Purdue
 
-   *  Marcus Ilhar
+   *  Marcus Ihlar
 
    *  Mark Nottingham
 
@@ -1363,9 +1363,9 @@ Table of Contents
    [I-D.ietf-quic-applicability]
               Kuehlewind, M. and B. Trammell, "Applicability of the QUIC
               Transport Protocol", Work in Progress, Internet-Draft,
-              draft-ietf-quic-applicability-12, 30 June 2021,
+              draft-ietf-quic-applicability-13, 2 September 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              applicability-12>.
+              applicability-13>.
 
    [I-D.ietf-tsvwg-transport-encrypt]
               Fairhurst, G. and C. Perkins, "Considerations around
@@ -1383,9 +1383,9 @@ Table of Contents
    [QUIC-APPLICABILITY]
               Kuehlewind, M. and B. Trammell, "Applicability of the QUIC
               Transport Protocol", Work in Progress, Internet-Draft,
-              draft-ietf-quic-applicability-12, 30 June 2021,
+              draft-ietf-quic-applicability-13, 2 September 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              applicability-12>.
+              applicability-13>.
 
    [QUIC-HTTP]
               Bishop, M., "Hypertext Transfer Protocol Version 3
